@@ -1,16 +1,10 @@
-import React, { useState } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { CustomButton } from '../components/CustomButton';
 
-export const CounterScreen = () => {
+export const CustomButton = ( location:String , setCounter:Function, counter:number ) => {
 
-    const [counter, setCounter] = useState(10)
   return (
-    <View style={styles.container}>
-        <Text
-        style={styles.title}>Counter: {counter}</Text>
-        <TouchableOpacity
-            style={styles.fabLocationBR}
+    <TouchableOpacity
+            style={location == 'br' ? styles.fabLocationBR : styles.fabLocationBL}
             onPress={() => {
                 setCounter(counter + 1)
             }}
@@ -19,26 +13,10 @@ export const CounterScreen = () => {
                 style={styles.fab}
             >
                 <Text style = { styles.fabText}>
-                    +1
+                    {location == 'br' ? '+1' : '-1'}
                 </Text>
             </View>
         </TouchableOpacity>
-        <TouchableOpacity
-            style={styles.fabLocationBL}
-            onPress={() => {
-                setCounter(counter - 1)
-            }}
-        >
-            <View
-                style={styles.fab}
-            >
-                <Text style = { styles.fabText}>
-                    -1
-                </Text>
-            </View>
-        </TouchableOpacity>
-     
-    </View>
   )
 }
 
