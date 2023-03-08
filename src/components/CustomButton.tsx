@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet, TouchableNativeFeedback } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, TouchableNativeFeedback, Platform } from 'react-native';
 
 interface Props {
     title: string;
@@ -8,9 +8,27 @@ interface Props {
 
 export const CustomButton = ( {title, position, onPress}:Props ) => {
 
-  return (
-    <>
-        <View
+    const ios = () => {
+        return(
+        <TouchableOpacity
+        activeOpacity={0.8}
+            style={[styles.fabLocation, position === 'br' ? styles.rigth : styles.left]}
+            onPress={ onPress }
+        >
+            <View
+                style={styles.fab}
+            >
+                <Text style = { styles.fabText}>
+                    {title}
+                </Text>
+            </View>
+        </TouchableOpacity>
+        )
+    }
+
+    const android = () => {
+        return(
+            <View
             style={[styles.fabLocation, position === 'br' ? styles.rigth : styles.left]}
         >
         <TouchableNativeFeedback
@@ -27,8 +45,12 @@ export const CustomButton = ( {title, position, onPress}:Props ) => {
             </View>
         </TouchableNativeFeedback>
         </View>
-    </>
-  )
+        )
+    }
+
+
+
+  return (Platform.OS === 'ios') ? ios() : android()
 }
 
 
