@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
-export const PositionScreen = () => {
+export const PositionRelativeScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.purpleBox}></View>
