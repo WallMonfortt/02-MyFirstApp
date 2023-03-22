@@ -7,6 +7,7 @@ import { DimensionsScreen } from './src/screens/DimensionsScreen';
 import { PositionRelativeScreen } from './src/screens/PositionRelativeScreen';
 import { PositionAbsoluteScreen } from './src/screens/PositionAbsoluteScreen';
 import { FlexScreen } from './src/screens/FlexScreen';
+import { FlexScreenDirection } from './src/screens/FlexScreenDirection';
 
 const App = () => {
   return (
@@ -18,7 +19,8 @@ const App = () => {
     {/* <DimensionsScreen /> */}
     {/* <PositionRelativeScreen /> */}
     {/* <PositionAbsoluteScreen /> */}
-    <FlexScreen />
+    {/* <FlexScreen /> */}
+    <FlexScreenDirection />
     </SafeAreaView>
     
   )
