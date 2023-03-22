@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row-reverse',
         backgroundColor: '#28C4D9',
-        justifyContent: 'space-evenly',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     box1:{
         borderWidth: 2,
