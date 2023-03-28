@@ -8,6 +8,7 @@ import { PositionRelativeScreen } from './src/screens/PositionRelativeScreen';
 import { PositionAbsoluteScreen } from './src/screens/PositionAbsoluteScreen';
 import { FlexScreen } from './src/screens/FlexScreen';
 import { FlexScreenDirection } from './src/screens/FlexScreenDirection';
+import { TareaScree } from './src/screens/TareaScree';
 
 const App = () => {
   return (
@@ -20,7 +21,8 @@ const App = () => {
     {/* <PositionRelativeScreen /> */}
     {/* <PositionAbsoluteScreen /> */}
     {/* <FlexScreen /> */}
-    <FlexScreenDirection />
+    {/* <FlexScreenDirection /> */}
+    <TareaScree />
     </SafeAreaView>
     
   )
