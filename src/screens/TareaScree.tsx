@@ -16,21 +16,26 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#28425B',
+        // flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        
     },
     cajaMorada:{
         borderWidth: 2,
         height: 100,
         width: 100,
+        top: 100,
         borderColor: 'white',
         backgroundColor: '#5856D6',
         textAlign: 'center',
         textAlignVertical: 'center',
     },
     cajaNaranja:{
-        flex: 1,
         borderWidth: 2,
         height: 100,
-        width: 100,
+        width   : 100,
+        left: 100,
         borderColor: 'white',
         backgroundColor: '#F0A23B',
         textAlign: 'center',
